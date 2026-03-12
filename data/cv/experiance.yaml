@@ -1,0 +1,32 @@
+    columns:
+      - id
+      - company
+      - title
+      - start_date
+      - end_date
+      - location
+      - highlights
+      - skills
+    rows:
+      - id: "block-sre"
+        company: "Block"
+        title: "Site Reliability Engineer, Observability"
+        start_date: "2023-05"
+        end_date: "current"
+        location: "Melbourne, Australia"
+        highlights:
+          - "Led reliability for Block's telemetry platform"
+          - "Platform migrations from Sumologic and NewRelic into Datadog"
+          - "Managed full lifecycle of logging, metrics, and tracing for Afterpay, Cash, and Square"
+          - "Agent skills development for including sentry management, k8s rightsizing, and datadog cost control"
+          - "MCP development for internal log platform"
+          - "Telemetry pipeline design and implementation"
+          - "Mentoring, technical guidance and project planning"
+        skills:
+          - AWS
+          - Datadog
+          - Vector
+          - OpenTelemetry
+          - Kubernetes
+          - Go
+          - Sentry

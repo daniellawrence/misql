@@ -1,0 +1,15 @@
+columns:
+  - id
+  - institution
+  - degree
+  - field_of_study
+  - start_date
+  - end_date
+
+rows:
+  - id: "1"
+    institution:  "1"
+    degree:  "1"
+    field_of_study:  "1"
+    start_date:  "1"
+    end_date: "1"

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -82,7 +83,13 @@ func loadTable(db *memory.Database, provider *memory.DbProvider, tableName strin
 		sqlRow := make(sql.Row, len(td.Columns))
 		for i, col := range td.Columns {
 			if v, ok := row[col]; ok {
-				sqlRow[i] = fmt.Sprintf("%v", v)
+				switch val := v.(type) {
+				case []interface{}:
+					b, _ := json.Marshal(val)
+					sqlRow[i] = string(b)
+				default:
+					sqlRow[i] = fmt.Sprintf("%v", val)
+				}
 			}
 		}
 		if err := table.Insert(ctx, sqlRow); err != nil {
